@@ -105,12 +105,31 @@
     <div class="border-text top-center">Happy Birthday!</div>
     <div class="border-text bottom-center">Happy Birthday🌷</div>
 
+    
+    <!-- Audio element to play music -->
+    <audio id="birthdayMusic" autoplay>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+   
+
+        
+</script>
     <script>
         const name = localStorage.getItem('name');
         const color = localStorage.getItem('color');
 
         document.getElementById('userName').textContent = name;
         document.body.style.backgroundColor = color;
+
+        // Stop music after 8 seconds
+        const audio = document.getElementById('birthdayMusic');
+        setTimeout(() => {
+            audio.pause();
+            audio.currentTime = 0; // Reset to the start
+        }, 20000);  // 8000ms = 8 seconds
     </script>
 </body>
 </html>
