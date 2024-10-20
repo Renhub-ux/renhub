@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please wait,💌 <span id="userName">🎀</span>...</h1>
+
+    <script>
+        const name = localStorage.getItem('name');
+        document.getElementById('userName').textContent = name;
+
+        setTimeout(() => {
+            window.location.href = 'birthday.html';
+        }, 5000);  // Wait for 3 seconds before redirecting
+    </script>
+</body>
+</html>
